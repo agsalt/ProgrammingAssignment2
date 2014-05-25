@@ -3,7 +3,7 @@
 ## Instead of recalculating the inverse for the same matrix submitted more than once
 ## the original result is recalled from cache rather than recalculated.
 
-## This first function creates a special matrix which is a list containg a function to 
+## This first function creates a special matrix which is a list containing a function to 
 ## 1. set the value of the matrix
 ## 2. get the value of the matrix
 ## 3. set the value of the matrix inverse
@@ -27,6 +27,8 @@ makeCacheMatrix <- function(x = matrix()) {
 ## first checks to see if it has already been calculated and if so gets the inverse 
 ## from the cache and skips the computation. Otherwise it calculates the inverse of the
 ## data and sets the value of the inverse in the cache via the setinverse function.
+## If the previously cahced version is returned the user is notified with
+## the message "getting cached data" otherwise no message is displayed.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
