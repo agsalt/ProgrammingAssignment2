@@ -10,6 +10,8 @@
 ## 4. get the value of the matrix inverse
 
 makeCacheMatrix <- function(x = matrix()) {
+         ## create a special "list" matrix of functions to to be used in caching an inverse
+         
          m <- NULL
          set <- function(y) {
                  x <<- y
